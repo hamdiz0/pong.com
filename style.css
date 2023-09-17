@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 body{
     display: flex;
@@ -10,23 +11,14 @@ body{
 }
 .pg{
     position: absolute;
-    border: solid rgb(30, 30, 30) 2px;
+    border: solid rgb(30, 30, 30) 3px;
     border-radius: 5px;
     top: 0.5%;
-    left: 7%;
+    left: 6.8%;
     width: 86%;
-    height: 98%;
+    height: 97.6%;
     background-color: rgb(221, 221, 221);
-}
-.ml{
-    position: relative;
-    top: 0%;
-    left: 50%;
-    width: 1px;
-    height: 100%;
-    background-color: rgb(30, 30, 30);
-    border: solid rgb(30, 30, 30) 1px;
-    border-radius: 5px;
+    z-index: -2;
 }
 .p{
     background-color: rgb(30, 30, 30);
@@ -49,13 +41,13 @@ body{
 }
 .obj{
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 1.5%;
+    height: 2.6%;
     background-color: rgb(30, 30, 30);
-    border: solid rgb(30, 30, 30);
     border-radius: 10px;
     top: 50%;
     left: 50%;
+    z-index: 1;
 }
 .sc{
     position: absolute;
@@ -71,10 +63,10 @@ body{
 .scorep1{
     left: 0.5%;
     border: solid rgb(189, 42, 42) 2px;
-    color: rgb(189, 42, 42);
+    color: rgb(193, 195, 197);
 }
 .scorep2{
-    color:rgb(12, 52, 126) ;
+    color:rgb(193, 195, 197) ;
     right: 0.5%;
     border: solid rgb(12, 52, 126) 2px;
 }
@@ -117,7 +109,6 @@ body{
 }
 .sp{
     position: absolute;
-    top: 0.5%;
     width: 8%;
     height: 5%;
     border: solid rgb(30, 30, 30) 2px;
@@ -126,9 +117,11 @@ body{
     background: transparent;
 }
 .spu{
+    top: 0.5%;
     left: 40%;
 }
 .spd{
+    top: 0.5%;   
     right: 40%;
 }
 .spu:hover{
@@ -140,4 +133,49 @@ body{
     border: solid rgb(12, 52, 126) ;
     color:rgb(12, 52, 126);
     background-color: rgb(30, 30, 30);
+}
+.start{
+    bottom: 0.5%;
+    left: 40%;
+}
+.pause{
+    bottom: 0.5%;   
+    right: 40%;
+}
+.start:hover{
+    border: solid rgb(189, 42, 42) ;
+    color: rgb(189, 42, 42);
+    background-color: rgb(30, 30, 30);
+}
+.pause:hover{
+    border: solid rgb(12, 52, 126) ;
+    color:rgb(12, 52, 126);
+    background-color: rgb(30, 30, 30);
+}
+.vid{
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+@media screen and (max-height : 500px){
+    .pg{
+        top: 6%;
+        width: 85%;
+        height: 85%;
+    }
+    .btn{
+        font-size: 70%;
+    }
+    .sc{
+        font-size: 90%;
+    }
+    .sp{
+        height: 8%;
+        width: 9%;
+    }
+    .vid{
+        min-width: 100%;
+        height: auto;
+    }
 }
